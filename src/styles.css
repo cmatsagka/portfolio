@@ -31,7 +31,6 @@ body {
 	line-height: 1.6;
 	background-color: var(--clr-bg);
 	color: var(--clr-text-main);
-	padding: var(--spacing-md);
 	min-height: 100vh;
 }
 
@@ -41,10 +40,28 @@ img {
 	display: block;
 }
 
+h1 {
+	font-size: clamp(1.8rem, 6vw, 5rem);
+}
+
+h2 {
+	font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+h3 {
+	font-size: clamp(1.2rem, 3vw, 1.75rem);
+}
+
+p {
+	font-size: clamp(1rem, 2vw, 1.125rem);
+}
+
 .header-portrait {
+	background-color: var(--clr-primary);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding-top: var(--spacing-lg);
 }
 
 .bio-card {
@@ -52,6 +69,7 @@ img {
 	flex-direction: column;
 	align-items: center;
 	gap: var(--spacing-sm);
+	padding: var(--spacing-md);
 }
 
 .logos {
@@ -113,7 +131,6 @@ footer {
 
 #contact {
 	text-align: center;
-	font-size: var(--font-size-lg);
 }
 
 #contact-call {
