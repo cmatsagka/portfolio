@@ -1,3 +1,25 @@
+@import url('https://rsms.me/inter/inter.css');
+
+:root {
+	--font-family: 'Inter', sans-serif;
+
+	--font-size-sm: 0.875rem;
+	--font-size-base: 1rem;
+	--font-size-md: 1.25rem;
+	--font-size-lg: 1.75rem;
+	--font-size-xl: 2.5rem;
+
+	--spacing-sm: 0.5rem;
+	--spacing-md: 1rem;
+	--spacing-lg: 2rem;
+
+	--clr-bg: #ffffff;
+	--clr-primary: #d46d18;
+	--clr-text-main: #000000;
+
+	--clr-hover: rgb(212, 109, 24 / 0.1);
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -5,5 +27,70 @@
 }
 
 body {
+	font-family: var(--font-family);
+	line-height: 1.6;
+	background-color: var(--clr-bg);
+	color: var(--clr-text-main);
+	padding: var(--spacing-md);
 	min-height: 100vh;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.header-portrait {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.bio-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-sm);
+}
+
+.logos {
+	display: flex;
+	gap: var(--spacing-sm);
+}
+
+main h2 {
+	text-align: center;
+	margin: var(--spacing-md) 0;
+}
+
+.work-cards {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-md);
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-sm);
+	border: 1px solid var(--clr-text-main);
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-sm);
+	padding: var(--spacing-md);
+}
+
+.info-header {
+	display: flex;
+	justify-content: space-between;
+	gap: var(--spacing-sm);
+}
+
+.info-header h3 {
+	margin-right: auto;
 }
