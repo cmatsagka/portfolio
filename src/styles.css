@@ -173,3 +173,14 @@ footer {
 	margin: 0 auto;
 	gap: var(--spacing-lg);
 }
+
+@media (min-width: 768px) {
+	header {
+		display: flex;
+	}
+
+	.header-portrait {
+		flex-direction: row;
+		padding: var(--spacing-md) var(--spacing-lg);
+	}
+}
