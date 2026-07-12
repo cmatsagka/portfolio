@@ -17,7 +17,8 @@
 	--clr-primary: #d46d18;
 	--clr-text-main: #000000;
 
-	--clr-hover: rgb(212, 109, 24 / 0.1);
+	--clr-shadow: hsla(0, 0%, 0%, 0.1);
+	--clr-hover: hsla(27, 80%, 46%, 0.2);
 }
 
 * {
@@ -32,6 +33,7 @@ body {
 	background-color: var(--clr-bg);
 	color: var(--clr-text-main);
 	min-height: 100vh;
+	overflow-x: hidden;
 }
 
 img {
@@ -112,6 +114,15 @@ main h2 {
 	flex-direction: column;
 	gap: var(--spacing-sm);
 	margin: var(--spacing-md) var(--spacing-sm);
+	box-shadow: 0 6px 6px var(--clr-shadow);
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 8px 16px var(--clr-hover);
 }
 
 .info {
