@@ -165,6 +165,10 @@ footer {
 	font-size: var(--font-size-md);
 }
 
+.contact-info img {
+	display: none;
+}
+
 .contact-section .logos {
 	margin: 0 auto;
 	gap: var(--spacing-lg);
