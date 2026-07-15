@@ -202,4 +202,34 @@ footer {
 	.socials {
 		justify-content: flex-end;
 	}
+
+	.work-cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		padding: var(--spacing-md);
+	}
+
+	footer {
+		display: flex;
+		flex-direction: row;
+		padding: var(--spacing-md);
+	}
+
+	#contact {
+		text-align: left;
+	}
+
+	.contact-info {
+		display: flex;
+		gap: var(--spacing-sm);
+	}
+
+	.contact-info img {
+		display: block;
+	}
+
+	.contact-section .logos {
+		margin: 0;
+		margin-top: var(--spacing-xsm);
+	}
 }
