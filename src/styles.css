@@ -29,6 +29,13 @@
 	box-sizing: border-box;
 }
 
+header,
+main,
+footer {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
 body {
 	font-family: var(--font-family);
 	line-height: 1.6;
