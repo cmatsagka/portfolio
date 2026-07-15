@@ -9,9 +9,11 @@
 	--font-size-lg: 1.75rem;
 	--font-size-xl: 2.5rem;
 
-	--spacing-sm: 0.5rem;
-	--spacing-md: 1rem;
+	--spacing-xsm: 0.5rem;
+	--spacing-sm: 1rem;
+	--spacing-md: 1.5rem;
 	--spacing-lg: 2rem;
+	--spacing-xl: 2.5rem;
 
 	--clr-bg: #ffffff;
 	--clr-primary: #d46d18;
@@ -43,7 +45,7 @@ img {
 }
 
 h1 {
-	font-size: clamp(1.8rem, 6vw, 5rem);
+	font-size: clamp(3rem, 6vw, 5rem);
 }
 
 h2 {
@@ -60,47 +62,48 @@ p {
 
 header {
 	position: relative;
-	isolation: isolate;
-}
-
-header::before {
-	content: '';
-	position: absolute;
-	top: -10%;
-	left: 0;
-	width: 100%;
-	height: 55%;
-	background-color: var(--clr-primary);
-	transform-origin: bottom left;
-	transform: skewY(-25deg);
-	z-index: -1;
-}
-
-.bio-card {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: var(--spacing-sm);
 	padding: var(--spacing-md);
 }
 
-.logos {
-	display: flex;
-	gap: var(--spacing-sm);
+.header-bg {
+	position: absolute;
+	inset: 0;
+	height: 320px;
+	background-color: var(--clr-primary);
+	clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%);
+	z-index: -1;
 }
 
-.portrait-wrapper {
-	box-shadow: 0 6px 6px var(--clr-shadow);
+.image-wrapper {
+	position: relative;
+	max-width: 320px;
+	margin: 0 auto;
 }
 
-#name {
-	font-size: var(--font-size-xl);
-	margin-top: -4rem;
-	padding-left: var(--spacing-sm);
+.header-image {
+	width: 100%;
+	display: block;
+	box-shadow: 0 8px 20px hsla(27, 80%, 46%, 0.2);
+}
+
+.image-wrapper h1 {
+	position: absolute;
+	bottom: var(--spacing-sm);
+	left: var(--spacing-sm);
+
 	color: var(--clr-bg);
 }
 
-.bio-card h2 {
+.bio-card {
+	margin-top: var(--spacing-md);
+
+	padding: var(--spacing-sm);
+}
+
+.socials {
+	display: flex;
+	justify-content: center;
+	gap: var(--spacing-md);
 	margin-top: var(--spacing-md);
 }
 
@@ -183,31 +186,4 @@ footer {
 }
 
 @media (min-width: 768px) {
-	header {
-	}
-
-	header::before {
-		height: 100%;
-		transform: skewY(-10deg);
-	}
-
-	.portrait-wrapper {
-		float: left;
-		margin-right: var(--spacing-lg);
-		margin-bottom: var(--spacing-md);
-	}
-
-	.bio-card {
-		padding: var(--spacing-lg);
-	}
-
-	.bio-card::after {
-		content: '';
-		display: table;
-		clear: both;
-	}
-
-	.bio-card .logos {
-		margin-left: auto;
-	}
 }
