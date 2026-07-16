@@ -67,6 +67,12 @@ p {
 	font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
+a:focus-visible {
+	outline: 3px dashed var(--clr-primary);
+	outline-offset: 4px;
+	border-radius: 4px;
+}
+
 .logo-icon {
 	width: 25px;
 	height: auto;
@@ -138,9 +144,11 @@ main h2 {
 		box-shadow 0.2s ease;
 }
 
-.card:hover {
+.card:hover,
+.card:focus-within {
 	transform: translateY(-4px);
 	box-shadow: 0 8px 16px var(--clr-hover);
+	outline: none;
 }
 
 .info {
