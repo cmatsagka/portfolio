@@ -16,11 +16,11 @@
 	--spacing-xl: 2.5rem;
 
 	--clr-bg: #ffffff;
-	--clr-primary: #d46d18;
+	--clr-primary: #14532d;
 	--clr-text-main: #000000;
 
-	--clr-shadow: hsla(0, 0%, 0%, 0.1);
-	--clr-hover: hsla(27, 80%, 46%, 0.2);
+	--clr-shadow: hsla(150, 15px, 10%, 0.1);
+	--clr-hover: hsl(142, 76%, 36%, 0.1);
 }
 
 * {
@@ -65,6 +65,10 @@ h3 {
 
 p {
 	font-size: clamp(1rem, 2vw, 1.125rem);
+}
+
+a {
+	color: var(--clr-text-main);
 }
 
 a:focus-visible {
