@@ -1,3 +1,10 @@
+// import battleshipImg from './assets/preview/battleship.jpg';
+// import weatherAppImg from './assets/preview/weatherApp.jpg';
+// import todoListImg from './assets/preview/todoList.jpg';
+// import ticTacToeImg from './assets/preview/ticTacToe.jpg';
+// import restaurantPageImg from './assets/preview/restaurantPage.jpg';
+// import libraryImg from './assets/preview/library.jpg';
+
 export const projects = [
 	{
 		title: 'Battleship',
@@ -6,6 +13,7 @@ export const projects = [
 		githubUrl: 'https://github.com/cmatsagka/battleship',
 		liveUrl: 'https://cmatsagka.github.io/battleship/',
 		tags: ['HTML', 'CSS', 'JavaScript'],
+		// imageSrc: battleshipImg,
 	},
 
 	{
@@ -15,6 +23,7 @@ export const projects = [
 		githubUrl: 'https://github.com/cmatsagka/weather-app',
 		liveUrl: 'https://cmatsagka.github.io/weather-app/',
 		tags: ['JavaScript', 'APIs', 'Async/Await', 'JSON'],
+		// imageSrc: weatherAppImg,
 	},
 
 	{
@@ -29,6 +38,7 @@ export const projects = [
 			'Modular Architecture',
 			'CSS Grid/Flexbox',
 		],
+		// imageSrc: todoListImg,
 	},
 
 	{
@@ -43,6 +53,7 @@ export const projects = [
 			'Factory Functions',
 			'DOM Manipulation',
 		],
+		// imageSrc: ticTacToeImg,
 	},
 
 	{
@@ -52,6 +63,7 @@ export const projects = [
 		githubUrl: 'https://github.com/cmatsagka/restaurant-page',
 		liveUrl: 'https://cmatsagka.github.io/restaurant-page/',
 		tags: ['JavaScript (ES6)', 'Webpack', 'Dynamic DOM', 'npm Tooling'],
+		// imageSrc: restaurantPageImg,
 	},
 
 	{
@@ -66,5 +78,6 @@ export const projects = [
 			'Forms & Validation',
 			'DOM API',
 		],
+		// imageSrc: libraryImg,
 	},
 ];

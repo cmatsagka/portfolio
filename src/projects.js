@@ -12,9 +12,16 @@ export function renderProjects() {
 		projectCard.classList.add('card');
 
 		const projectImage = document.createElement('img');
-		projectImage.src = 'https://placehold.co/150/orange/white';
+		projectImage.classList.add('card-img');
+		projectImage.src =
+			proj.imageSrc || 'https://placehold.co/150/orange/white';
 		projectImage.alt = '';
 		projectImage.setAttribute('aria-hidden', true);
+
+		projectImage.loading = 'lazy';
+		projectImage.decoding = 'async';
+		projectImage.width = 600;
+		projectImage.height = 400;
 
 		const info = document.createElement('div');
 		info.classList.add('info');

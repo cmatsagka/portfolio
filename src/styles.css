@@ -150,8 +150,8 @@ main h2 {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	gap: var(--spacing-sm);
 	background-color: var(--clr-bg);
+	overflow: hidden;
 	box-shadow: 0 6px 6px var(--clr-shadow);
 	transition:
 		transform 0.2s ease,
@@ -163,6 +163,14 @@ main h2 {
 	transform: translateY(-4px);
 	box-shadow: 0 8px 16px var(--clr-hover);
 	outline: none;
+}
+
+.card-img {
+	width: 100%;
+	aspect-ratio: 3 / 2;
+	object-fit: cover;
+	object-position: top center;
+	background-color: var(--clr-hover);
 }
 
 .info {
