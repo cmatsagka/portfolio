@@ -1,9 +1,15 @@
-// import battleshipImg from './assets/preview/battleship.jpg';
-// import weatherAppImg from './assets/preview/weatherApp.jpg';
-// import todoListImg from './assets/preview/todoList.jpg';
-// import ticTacToeImg from './assets/preview/ticTacToe.jpg';
-// import restaurantPageImg from './assets/preview/restaurantPage.jpg';
-// import libraryImg from './assets/preview/library.jpg';
+import battleship1x from './assets/preview/battleship_1x.webp';
+import battleship2x from './assets/preview/battleship_2x.webp';
+import weatherApp1x from './assets/preview/weatherApp_1x.webp';
+import weatherApp2x from './assets/preview/weatherApp_2x.webp';
+import todoList1x from './assets/preview/todoList_1x.webp';
+import todoList2x from './assets/preview/todoList_2x.webp';
+import ticTacToe1x from './assets/preview/ticTacToe_1x.webp';
+import ticTacToe2x from './assets/preview/ticTacToe_2x.webp';
+import restaurantPage1x from './assets/preview/restaurantPage_1x.webp';
+import restaurantPage2x from './assets/preview/restaurantPage_2x.webp';
+import library1x from './assets/preview/library_1x.webp';
+import library2x from './assets/preview/library_2x.webp';
 
 export const projects = [
 	{
@@ -13,7 +19,7 @@ export const projects = [
 		githubUrl: 'https://github.com/cmatsagka/battleship',
 		liveUrl: 'https://cmatsagka.github.io/battleship/',
 		tags: ['HTML', 'CSS', 'JavaScript'],
-		// imageSrc: battleshipImg,
+		images: { x1: battleship1x, x2: battleship2x },
 	},
 
 	{
@@ -23,7 +29,7 @@ export const projects = [
 		githubUrl: 'https://github.com/cmatsagka/weather-app',
 		liveUrl: 'https://cmatsagka.github.io/weather-app/',
 		tags: ['JavaScript', 'APIs', 'Async/Await', 'JSON'],
-		// imageSrc: weatherAppImg,
+		images: { x1: weatherApp1x, x2: weatherApp2x },
 	},
 
 	{
@@ -38,7 +44,7 @@ export const projects = [
 			'Modular Architecture',
 			'CSS Grid/Flexbox',
 		],
-		// imageSrc: todoListImg,
+		images: { x1: todoList1x, x2: todoList2x },
 	},
 
 	{
@@ -53,7 +59,7 @@ export const projects = [
 			'Factory Functions',
 			'DOM Manipulation',
 		],
-		// imageSrc: ticTacToeImg,
+		images: { x1: ticTacToe1x, x2: ticTacToe2x },
 	},
 
 	{
@@ -63,7 +69,7 @@ export const projects = [
 		githubUrl: 'https://github.com/cmatsagka/restaurant-page',
 		liveUrl: 'https://cmatsagka.github.io/restaurant-page/',
 		tags: ['JavaScript (ES6)', 'Webpack', 'Dynamic DOM', 'npm Tooling'],
-		// imageSrc: restaurantPageImg,
+		images: { x1: restaurantPage1x, x2: restaurantPage2x },
 	},
 
 	{
@@ -78,6 +84,6 @@ export const projects = [
 			'Forms & Validation',
 			'DOM API',
 		],
-		// imageSrc: libraryImg,
+		images: { x1: library1x, x2: library2x },
 	},
 ];

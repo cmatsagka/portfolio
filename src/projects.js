@@ -13,15 +13,15 @@ export function renderProjects() {
 
 		const projectImage = document.createElement('img');
 		projectImage.classList.add('card-img');
-		projectImage.src =
-			proj.imageSrc || 'https://placehold.co/150/orange/white';
+		projectImage.src = proj.images.x1;
+		projectImage.srcset = `${proj.images.x1} 1x, ${proj.images.x2} x2`;
 		projectImage.alt = '';
 		projectImage.setAttribute('aria-hidden', true);
+		projectImage.width = 900;
+		projectImage.height = 600;
 
 		projectImage.loading = 'lazy';
 		projectImage.decoding = 'async';
-		projectImage.width = 600;
-		projectImage.height = 400;
 
 		const info = document.createElement('div');
 		info.classList.add('info');
