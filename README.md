@@ -2,7 +2,7 @@
 
 A clean, minimalist portfolio website designed to showcase web applications and design work. This project bridges the gap between technical logic and aesthetic layout, focusing on accessible semantic structure, modular code, and efficient asset delivery.
 
-## Live Demo:
+## [View Live Application](https://cmatsagka.github.io/portfolio/)
 
 ## 📊 Key Details & Architecture
 
@@ -76,7 +76,7 @@ Ensure you have [Node.js](https://nodejs.org/) installed locally.
 4.  **Build for production:**
 
     ```bash
-    npm build
+    npm run build
     ```
 
 ## ✉️ Connect
