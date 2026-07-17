@@ -124,9 +124,13 @@ export function renderProjects() {
 		externalIcon.setAttribute('aria-hidden', true);
 		liveLink.appendChild(externalIcon);
 
+		const linksWrapper = document.createElement('div');
+		linksWrapper.classList.add('links-wrapper');
+		linksWrapper.appendChild(githubLink);
+		linksWrapper.appendChild(liveLink);
+
 		infoHeader.appendChild(title);
-		infoHeader.appendChild(githubLink);
-		infoHeader.appendChild(liveLink);
+		infoHeader.appendChild(linksWrapper);
 		info.appendChild(infoHeader);
 
 		const projectAbout = document.createElement('p');
