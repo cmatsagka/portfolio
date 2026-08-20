@@ -4,6 +4,8 @@ A clean, minimalist portfolio website designed to showcase web applications and 
 
 ## [View Live Application](https://cmatsagka.github.io/portfolio/)
 
+![Portfolio Preview Image](image.png)
+
 ## 📊 Key Details & Architecture
 
 - **Aesthetic & Logic:** Built with fluid layouts (`clamp()`) and custom architectural shadows, removing unnecessary decoration or visual noise.
