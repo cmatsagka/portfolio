@@ -4,7 +4,7 @@ A clean, minimalist portfolio website designed to showcase web applications and 
 
 ## [View Live Application](https://cmatsagka.github.io/portfolio/)
 
-![Portfolio Preview Image](image.png)
+![Portfolio Preview Image](src/assets/image.png)
 
 ## 📊 Key Details & Architecture
 
