@@ -10,8 +10,27 @@ import restaurantPage1x from './assets/preview/restaurantPage_1x.webp';
 import restaurantPage2x from './assets/preview/restaurantPage_2x.webp';
 import library1x from './assets/preview/library_1x.webp';
 import library2x from './assets/preview/library_2x.webp';
+import installation1x from './assets/preview/installation_1x.webp';
+import installation2x from './assets/preview/installation_2x.webp';
 
 export const projects = [
+	{
+		title: 'Interactive Installation',
+		description:
+			'Undergraduate thesis project: An interactive sound installation bridging Arduino sensors, plants, and Pure Data generative soundscapes to explore human-nature dynamics.',
+		githubUrl: 'https://github.com/cmatsagka/installation-repo',
+		liveUrl: 'https://cmatsagka.github.io/installation-repo/',
+		tags: [
+			'HTML',
+			'CSS',
+			'JavaScript',
+			'Arduino',
+			'Raspberry Pi',
+			'Pure Data',
+		],
+		images: { x1: installation1x, x2: installation2x },
+	},
+
 	{
 		title: 'Battleship',
 		description:
@@ -60,21 +79,6 @@ export const projects = [
 			'CSS Grid/Flexbox',
 		],
 		images: { x1: todoList1x, x2: todoList2x },
-	},
-
-	{
-		title: 'Personal Library',
-		description:
-			'A digital bookshelf app for cataloging books. Built with vanilla JS, focusing on dynamic object prototypes, DOM tables, and custom form validation.',
-		githubUrl: 'https://github.com/cmatsagka/library',
-		liveUrl: 'https://cmatsagka.github.io/library/',
-		tags: [
-			'JavaScript (ES6)',
-			'Object Prototypes',
-			'Forms & Validation',
-			'DOM API',
-		],
-		images: { x1: library1x, x2: library2x },
 	},
 
 	{
