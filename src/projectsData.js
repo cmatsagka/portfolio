@@ -8,10 +8,12 @@ import ticTacToe1x from './assets/preview/ticTacToe_1x.webp';
 import ticTacToe2x from './assets/preview/ticTacToe_2x.webp';
 import restaurantPage1x from './assets/preview/restaurantPage_1x.webp';
 import restaurantPage2x from './assets/preview/restaurantPage_2x.webp';
-import library1x from './assets/preview/library_1x.webp';
-import library2x from './assets/preview/library_2x.webp';
 import installation1x from './assets/preview/installation_1x.webp';
 import installation2x from './assets/preview/installation_2x.webp';
+import cvApplication1x from './assets/preview/cvApplication_1x.webp';
+import cvApplication2x from './assets/preview/cvApplication_2x.webp';
+import memoryCardGame1x from './assets/preview/memoryCardGame_1x.webp';
+import memoryCardGame2x from './assets/preview/memoryCardGame_2x.webp';
 
 export const projects = [
 	{
@@ -32,6 +34,15 @@ export const projects = [
 	},
 
 	{
+		title: 'Memory Card Game',
+		description:
+			'A child-friendly memory card game built with React, featuring dynamic sticker layouts, multiple difficulty modes, custom avatar themes, and persistent high scores.',
+		githubUrl: 'https://github.com/cmatsagka/memory-card-game',
+		liveUrl: 'https://memory-card-bay-nu.vercel.app/',
+		tags: ['React', 'Vite', 'JavaScript', 'CSS', 'Local Storage'],
+		images: { x1: memoryCardGame1x, x2: memoryCardGame2x },
+	},
+	{
 		title: 'Battleship',
 		description:
 			'A responsive, test-driven Battleship game built with vanilla JavaScript (ES6+), HTML5, and CSS3. Features interactive drag-and-drop mechanics, a custom tracking AI, and a robust Jest unit testing suite.',
@@ -40,30 +51,24 @@ export const projects = [
 		tags: ['HTML', 'CSS', 'JavaScript'],
 		images: { x1: battleship1x, x2: battleship2x },
 	},
-
 	{
-		title: 'Tic-Tac-Toe',
+		title: 'CV Application',
 		description:
-			'A modular, zero-globals Tic-Tac-Toe game built with vanilla JS. Emphasizes clean architecture using Factory Functions and the Module Pattern.',
-		githubUrl: 'https://github.com/cmatsagka/tic-tac-toe',
-		liveUrl: 'https://cmatsagka.github.io/tic-tac-toe/',
-		tags: [
-			'JavaScript (ES6)',
-			'Module Pattern',
-			'Factory Functions',
-			'DOM Manipulation',
-		],
-		images: { x1: ticTacToe1x, x2: ticTacToe2x },
+			'A dynamic React application that allows users to easily build, preview, and edit professional CVs with real-time state updates and structured component forms.',
+		githubUrl: 'https://github.com/cmatsagka/cv-application',
+		liveUrl: 'https://cv-application-ten-psi.vercel.app/',
+		tags: ['React', 'JavaScript', 'CSS', 'Component State'],
+		images: { x1: cvApplication1x, x2: cvApplication2x },
 	},
 
 	{
-		title: 'Restaurant Page',
+		title: 'Weather App',
 		description:
-			'A modular single-page restaurant site built entirely with vanilla JS and packaged with Webpack. Features dynamic, tabbed content switching.',
-		githubUrl: 'https://github.com/cmatsagka/restaurant-page',
-		liveUrl: 'https://cmatsagka.github.io/restaurant-page/',
-		tags: ['JavaScript (ES6)', 'Webpack', 'Dynamic DOM', 'npm Tooling'],
-		images: { x1: restaurantPage1x, x2: restaurantPage2x },
+			'A responsive weather forecast web application featuring real-time weather data retrieval. Utilizes asynchronous JavaScript (Fetch API, Promises, async/await) to fetch, process, and dynamically present geographical data.',
+		githubUrl: 'https://github.com/cmatsagka/weather-app',
+		liveUrl: 'https://cmatsagka.github.io/weather-app/',
+		tags: ['JavaScript', 'APIs', 'Async/Await', 'JSON'],
+		images: { x1: weatherApp1x, x2: weatherApp2x },
 	},
 
 	{
@@ -79,15 +84,5 @@ export const projects = [
 			'CSS Grid/Flexbox',
 		],
 		images: { x1: todoList1x, x2: todoList2x },
-	},
-
-	{
-		title: 'Weather App',
-		description:
-			'A responsive weather forecast web application featuring real-time weather data retrieval. Utilizes asynchronous JavaScript (Fetch API, Promises, async/await) to fetch, process, and dynamically present geographical data.',
-		githubUrl: 'https://github.com/cmatsagka/weather-app',
-		liveUrl: 'https://cmatsagka.github.io/weather-app/',
-		tags: ['JavaScript', 'APIs', 'Async/Await', 'JSON'],
-		images: { x1: weatherApp1x, x2: weatherApp2x },
 	},
 ];
