@@ -27,6 +27,7 @@ export const projects = [
 			'Pure Data',
 		],
 		images: { x1: installation1x, x2: installation2x },
+		featured: true,
 	},
 
 	{
@@ -37,6 +38,7 @@ export const projects = [
 		liveUrl: 'https://memory-card-bay-nu.vercel.app/',
 		tags: ['React', 'Vite', 'JavaScript', 'CSS', 'Local Storage'],
 		images: { x1: memoryCardGame1x, x2: memoryCardGame2x },
+		featured: false,
 	},
 	{
 		title: 'Battleship',
@@ -46,6 +48,7 @@ export const projects = [
 		liveUrl: 'https://cmatsagka.github.io/battleship/',
 		tags: ['HTML', 'CSS', 'JavaScript'],
 		images: { x1: battleship1x, x2: battleship2x },
+		featured: false,
 	},
 	{
 		title: 'CV Application',
@@ -55,6 +58,7 @@ export const projects = [
 		liveUrl: 'https://cv-application-ten-psi.vercel.app/',
 		tags: ['React', 'JavaScript', 'CSS', 'Component State'],
 		images: { x1: cvApplication1x, x2: cvApplication2x },
+		featured: false,
 	},
 
 	{
@@ -65,6 +69,7 @@ export const projects = [
 		liveUrl: 'https://cmatsagka.github.io/weather-app/',
 		tags: ['JavaScript', 'APIs', 'Async/Await', 'JSON'],
 		images: { x1: weatherApp1x, x2: weatherApp2x },
+		featured: false,
 	},
 
 	{
@@ -80,5 +85,6 @@ export const projects = [
 			'CSS Grid/Flexbox',
 		],
 		images: { x1: todoList1x, x2: todoList2x },
+		featured: false,
 	},
 ];
