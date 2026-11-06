@@ -11,50 +11,43 @@
 	</head>
 	<body>
 		<header>
-			<div class="header-bg"></div>
-			<article class="bio-card">
-				<img
-					class="header-image"
-					src="./assets/profile/portrait_1x.webp"
-					srcset="
-						./assets/profile/portrait_1x.webp 1x,
-						./assets/profile/portrait_2x.webp 2x
-					"
-					alt="Generative digital portrait of Chrysanthi Matsagka"
-					width="300"
-					height="400"
-					loading="eager"
-				/>
-				<h1>Chrysanthi Matsagka</h1>
-				<h2>About me</h2>
-				<p class="bio-lead">
-					I am a creative developer and designer with an Integrated
-					Master in Audio Visual Arts, bridging the gap between
-					aesthetic design and technical logic to build engaging
-					digital experiences.
-				</p>
-
-				<div class="bio-pillars">
-					<div class="pillar">
-						<h3>Art &amp; Design</h3>
-						<p>
-							Rooted in graphic design and branding. I craft
-							visual identities and refined, responsive interfaces
-							that look beautiful on any screen.
-						</p>
-					</div>
-					<div class="pillar">
-						<h3>Logic &amp; Engineering</h3>
-						<p>
-							Driven by technical logic. I develop web
-							applications using modern JavaScript, interactive
-							installations, and physical computing.
-						</p>
-					</div>
-				</div>
-				<p class="bio-closing">
-					Designing with logic. Coding with aesthetic intent.
-				</p>
+			<h1>Chrysanthi Matsagka</h1>
+			<nav>
+				<ul>
+					<li><a href="#projects-container">Projects</a></li>
+					<li><a href="#tech-stack">Tech Stack</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="hero-section">
+				<p>Welcoming Quote</p>
+				<svg
+					id="hero-logo"
+					width="412"
+					height="507"
+					viewBox="0 0 824 1014"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M799.08 324.148C799.08 481.136 671.893 608.4 515 608.4C358.106 608.4 230.919 481.136 230.919 324.148C230.919 167.159 358.106 39.8951 515 39.8951C671.893 39.8951 799.08 167.159 799.08 324.148Z"
+						fill="black"
+					/>
+					<rect
+						x="54.8228"
+						y="171.216"
+						width="511.677"
+						height="511.987"
+						fill="black"
+					/>
+					<path
+						d="M382.097 265.967L713.002 839.459H51.1913L382.097 265.967Z"
+						fill="black"
+					/>
+				</svg>
 				<div class="socials">
 					<a
 						href="https://github.com/cmatsagka"
@@ -85,19 +78,67 @@
 						rel="noopener noreferrer"
 						><img
 							class="logo-icon"
-							src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/behance/behance.svg"
+							src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/behance/behance-plain.svg"
 							alt=""
 							aria-hidden="true"
 					/></a>
 				</div>
+			</section>
+
+			<section>
+				<h2>My work</h2>
+				<div id="projects-container" class="projects-container"></div>
+			</section>
+
+			<section id="tech-stack" class="tech-stack-card">
+				<h2>Tech Stack</h2>
+				<div class="bio-pillars">
+					<div class="pillar">
+						<h3>Art &amp; Design</h3>
+						<ul>
+							<li>Figma</li>
+						</ul>
+					</div>
+					<div class="pillar">
+						<h3>Logic &amp; Engineering</h3>
+						<ul>
+							<li>HTML</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<article id="about" class="bio-card">
+				<h2>About me</h2>
+				<p class="bio-lead">
+					I am a creative developer and designer with an Integrated
+					Master in Audio Visual Arts, bridging the gap between
+					aesthetic design and technical logic to build engaging
+					digital experiences.
+				</p>
+
+				<div class="bio-pillars">
+					<div class="pillar">
+						<h3>Art &amp; Design</h3>
+						<p>
+							Rooted in graphic design and branding. I craft
+							visual identities and refined, responsive interfaces
+							that look beautiful on any screen.
+						</p>
+					</div>
+					<div class="pillar">
+						<h3>Logic &amp; Engineering</h3>
+						<p>
+							Driven by technical logic. I develop web
+							applications using modern JavaScript, interactive
+							installations, and physical computing.
+						</p>
+					</div>
+				</div>
+				<p class="bio-closing">
+					Designing with logic. Coding with aesthetic intent.
+				</p>
 			</article>
-		</header>
-		<main>
-			<h2>My work</h2>
-			<section
-				id="projects-container"
-				class="projects-container"
-			></section>
 		</main>
 		<footer>
 			<section class="contact-section">
@@ -161,9 +202,8 @@
 			</section>
 			<svg
 				id="footer-logo"
-				class="logo-icon"
-				width="824"
-				height="1014"
+				width="412"
+				height="507"
 				viewBox="0 0 824 1014"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
