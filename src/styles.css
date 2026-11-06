@@ -23,7 +23,13 @@
 	--clr-hover: hsla(142, 76%, 36%, 0.15);
 }
 
-* {
+html {
+	scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -43,12 +49,29 @@ body {
 	color: var(--clr-text-main);
 	min-height: 100vh;
 	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
 }
 
-img {
+ul,
+ol {
+	list-style: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
 	max-width: 100%;
 	height: auto;
 	display: block;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
 }
 
 h1 {
@@ -69,6 +92,7 @@ p {
 
 a {
 	color: var(--clr-text-main);
+	text-decoration: none;
 }
 
 a:focus-visible {
@@ -92,26 +116,7 @@ a:focus-visible {
 }
 
 header {
-	position: relative;
 	padding: var(--spacing-md);
-}
-
-.header-bg {
-	position: absolute;
-	inset: 0;
-	height: 320px;
-	background-color: transparent;
-	border-bottom: 4px solid var(--clr-primary);
-	z-index: -1;
-}
-
-.header-image {
-	width: 100%;
-	max-width: 300px;
-	aspect-ratio: 3 / 4;
-	object-fit: cover;
-	display: block;
-	box-shadow: 0 8px 20px var(--clr-shadow);
 }
 
 .bio-card {
@@ -137,7 +142,7 @@ header {
 	margin-bottom: var(--spacing-md);
 }
 
-.bio-pillars {
+.section-pillars {
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing-md);
@@ -278,15 +283,6 @@ footer {
 	box-shadow: 0 -6px 10px -4px var(--clr-shadow);
 }
 
-.footer-image {
-	width: 100%;
-	max-width: 320px;
-	aspect-ratio: 3 / 4;
-	object-fit: cover;
-	display: block;
-	margin: 0 auto;
-}
-
 .contact-section {
 	display: flex;
 	flex-direction: column;
@@ -316,12 +312,6 @@ footer {
 }
 
 @media (min-width: 768px) {
-	.header-image {
-		float: left;
-		width: 280px;
-		transform: translate(-40px, -40px);
-	}
-
 	.bio-card {
 		margin: var(--spacing-lg);
 		background: var(--clr-bg);
@@ -361,11 +351,6 @@ footer {
 		margin-top: var(--spacing-md);
 		align-items: center;
 		gap: var(--spacing-lg);
-	}
-
-	.footer-image {
-		max-width: 280px;
-		margin: 0;
 	}
 
 	#contact {
