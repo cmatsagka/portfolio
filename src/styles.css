@@ -1,5 +1,5 @@
 :root {
-	--font-family: 'Inter', sans-serif;
+	--font-family: 'Roboto', sans-serif;
 
 	--font-size-sm: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
 	--font-size-base: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
@@ -173,12 +173,16 @@ main {
 
 .hero-tagline pre {
 	margin: 0;
-	font-family: 'Fira Code', 'Courier New', monospace;
 	font-size: var(--font-size-lg);
-	line-height: 1.25;
+	font-weight: 200;
+	line-height: 1.2;
 	text-align: right;
-	white-space: pre-wrap;
-	color: var(--clr-text-secondary);
+	white-space: pre;
+	text-transform: uppercase;
+}
+
+.json-str {
+	font-weight: 900;
 }
 
 #hero-logo {
