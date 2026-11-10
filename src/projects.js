@@ -14,15 +14,30 @@ export function renderProjects() {
 		const topOffset = 6 + index * 1.5;
 		panel.style.top = `${topOffset}rem`;
 
-		const meta = document.createElement('div');
-		meta.classList.add('project-meta');
+		const preview = document.createElement('div');
+		preview.classList.add('project-preview');
+
+		const projectImage = document.createElement('img');
+		projectImage.classList.add('project-img');
+		projectImage.src = proj.images.x1;
+		projectImage.srcset = `${proj.images.x1} 1x, ${proj.images.x2} 2x`;
+		projectImage.alt = '';
+		projectImage.setAttribute('aria-hidden', true);
+		projectImage.width = 900;
+		projectImage.height = 600;
+		projectImage.loading = 'lazy';
+		projectImage.decoding = 'async';
+		preview.appendChild(projectImage);
 
 		const indexLabel = document.createElement('span');
 		indexLabel.classList.add('project-index');
 		const currentIndex = String(index + 1).padStart(2, '0');
 		const totalProjects = String(projects.length).padStart(2, '0');
 		indexLabel.textContent = `${currentIndex} / ${totalProjects}`;
-		meta.appendChild(indexLabel);
+		preview.appendChild(indexLabel);
+
+		const meta = document.createElement('div');
+		meta.classList.add('project-meta');
 
 		const headerRow = document.createElement('div');
 		headerRow.classList.add('project-header-row');
@@ -94,22 +109,6 @@ export function renderProjects() {
 
 			meta.appendChild(tagsWrapper);
 		}
-
-		const preview = document.createElement('div');
-		preview.classList.add('project-preview');
-
-		const projectImage = document.createElement('img');
-		projectImage.classList.add('project-img');
-		projectImage.src = proj.images.x1;
-		projectImage.srcset = `${proj.images.x1} 1x, ${proj.images.x2} 2x`;
-		projectImage.alt = '';
-		projectImage.setAttribute('aria-hidden', true);
-		projectImage.width = 900;
-		projectImage.height = 600;
-		projectImage.loading = 'lazy';
-		projectImage.decoding = 'async';
-
-		preview.appendChild(projectImage);
 		panel.appendChild(meta);
 		panel.appendChild(preview);
 		container.appendChild(panel);

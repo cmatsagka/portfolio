@@ -162,11 +162,6 @@ h1 {
 	color: var(--clr-primary);
 }
 
-main {
-	max-width: 1200px;
-	margin: 0 auto;
-}
-
 .hero-section {
 	display: grid;
 	grid-template-columns: auto 1fr;
@@ -175,6 +170,8 @@ main {
 	gap: var(--spacing-xsm);
 	padding: 0 var(--spacing-md);
 	min-height: calc(100vh - 75px);
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .hero-tagline {
@@ -333,7 +330,6 @@ main {
 
 .projects-section {
 	position: relative;
-	max-width: 1200px;
 	margin: var(--spacing-xl) auto;
 	padding: var(--spacing-lg) var(--spacing-md);
 }
@@ -350,15 +346,35 @@ main {
 	position: sticky;
 	border-top: 2px solid var(--clr-text-main);
 	padding: var(--spacing-lg) 0;
-	display: grid;
-	grid-template-columns: 1.1fr 0.9fr;
-	gap: var(--spacing-xl);
-	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
 	margin-bottom: var(--spacing-xl);
-	box-shadow: 0 -12px 24px var(--clr-shadow);
+}
+
+.project-preview {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+
+.project-img {
+	width: 100%;
+	aspect-ratio: 21 / 9;
+	object-fit: cover;
+	object-position: top center;
+	display: block;
+	transition: transform 0.4s ease;
+}
+
+.project-panel:hover .project-img {
+	transform: scale(1.02);
 }
 
 .project-index {
+	position: absolute;
+	bottom: var(--spacing-md);
+	left: var(--spacing-md);
 	font-size: var(--font-size-sm);
 	font-weight: 600;
 	color: var(--clr-text-secondary);
@@ -367,12 +383,18 @@ main {
 	margin-bottom: var(--spacing-xsm);
 }
 
+.project-meta {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-sm);
+	padding-top: var(--spacing-xsm);
+}
+
 .project-header-row {
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
 	gap: var(--spacing-sm);
-	margin-bottom: var(--spacing-sm);
 }
 
 .project-title {
@@ -404,7 +426,6 @@ main {
 	font-size: var(--font-size-base);
 	color: var(--clr-text-secondary);
 	line-height: 1.6;
-	margin-bottom: var(--spacing-md);
 	max-width: 48ch;
 }
 
@@ -412,7 +433,7 @@ main {
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--spacing-xsm);
-	margin-bottom: var(--spacing-md);
+	margin-top: var(--spacing-xsm);
 }
 
 .project-tag {
@@ -420,23 +441,6 @@ main {
 	font-weight: 600;
 	padding: 0.25rem 0.75rem;
 	color: var(--clr-primary);
-}
-
-.project-preview {
-	overflow: hidden;
-}
-
-.project-img {
-	width: 100%;
-	aspect-ratio: 16 / 10;
-	object-fit: cover;
-	object-position: top center;
-	display: block;
-	transition: transform 0.4s ease;
-}
-
-.project-panel:hover .project-img {
-	transform: scale(1.02);
 }
 
 footer {
@@ -525,8 +529,10 @@ footer {
 	.project-panel {
 		position: relative;
 		top: 0 !important;
-		grid-template-columns: 1fr;
-		gap: var(--spacing-md);
+	}
+
+	.project-img {
+		aspect-ratio: 16 / 10;
 	}
 
 	.tech-stack-card .section-pillars {
