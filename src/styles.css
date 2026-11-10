@@ -418,39 +418,62 @@ main h2 {
 }
 
 footer {
+	border: 2px solid var(--clr-text-main);
+	padding: var(--spacing-xl) var(--spacing-md);
+	margin-top: var(--spacing-xl);
+}
+
+.footer-container {
+	max-width: 1200px;
+	margin: 0 auto;
 	display: flex;
-	flex-direction: column;
-	background-color: var(--clr-bg);
-	color: var(--clr-text-main);
-	box-shadow: 0 -6px 10px -4px var(--clr-shadow);
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--spacing-xl);
 }
 
 .contact-section {
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing-md);
-	padding: var(--spacing-lg) var(--spacing-md);
+	max-width: 55ch;
 }
 
-#contact {
-	text-align: center;
+.contact-section h2 {
+	font-size: var(--font-size-xl);
+	font-weight: 800;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
 }
 
 .contact-text {
-	font-size: var(--font-size-base);
+	font-size: var(--font-size-md);
 	line-height: 1.6;
-	margin-bottom: var(--spacing-md);
-	max-width: 45ch;
+	color: var(--clr-text-secondary);
 }
 
-.contact-info svg {
-	display: none;
+.contact-direct {
+	margin-top: var(--spacing-xsm);
 }
 
-.contact-section .logos {
+.contact-email {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--spacing-sm);
+	font-weight: 700;
+	transition: opacity 0.2s ease;
+}
+
+.footer-socials {
 	display: flex;
-	margin: 0 auto;
-	gap: var(--spacing-lg);
+	gap: var(--spacing-md);
+	align-items: center;
+	transition: opacity 0.2s ease;
+}
+
+.contact-email:hover,
+.footer-socials a:hover {
+	opacity: 0.8;
 }
 
 @media (max-width: 768px) {
@@ -495,59 +518,26 @@ footer {
 		text-align: left;
 		margin-left: 0;
 	}
-}
 
-@media (min-width: 768px) {
-	.bio-card {
-		margin: var(--spacing-lg);
-		background: var(--clr-bg);
-		box-shadow: 0 5px 15px var(--clr-shadow);
-	}
-
-	.bio-pillars {
-		flex-direction: row;
+	.footer-container {
+		flex-direction: column;
+		align-items: flex-start;
 		gap: var(--spacing-lg);
 	}
 
-	.bio-card h1 {
-		color: var(--clr-primary);
-		margin-top: 0;
+	#footer-logo {
+		max-width: 180px;
+		align-self: center;
+		margin-top: var(--spacing-md);
 	}
+}
 
+@media (min-width: 768px) {
 	.projects-container {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		padding: var(--spacing-md);
 		align-items: stretch;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-		padding: var(--spacing-lg) var(--spacing-md);
-		margin-top: var(--spacing-md);
-		align-items: center;
-		gap: var(--spacing-lg);
-	}
-
-	#contact {
-		text-align: left;
-	}
-
-	.contact-info {
-		display: flex;
-		gap: var(--spacing-sm);
-	}
-
-	.contact-info svg {
-		display: block;
-		align-self: center;
-	}
-
-	.contact-section .logos {
-		margin: 0;
-		margin-top: var(--spacing-xsm);
 	}
 }
 
