@@ -160,18 +160,25 @@ main {
 	display: grid;
 	grid-template-columns: auto 1fr;
 	align-items: center;
-	gap: var(--spacing-xl);
+	justify-content: center;
+	gap: var(--spacing-xsm);
 	padding: 0 var(--spacing-md);
 	min-height: calc(100vh - 75px);
 }
 
 .hero-tagline {
-	width: 200px;
+	width: min-content;
+	justify-self: end;
+}
+
+.hero-tagline pre {
+	margin: 0;
+	font-family: 'Fira Code', 'Courier New', monospace;
+	font-size: var(--font-size-lg);
+	line-height: 1.25;
 	text-align: right;
-	font-size: var(--font-size-md);
-	font-weight: 500;
-	line-height: 1.5;
-	letter-spacing: -0.01;
+	white-space: pre-wrap;
+	color: var(--clr-text-secondary);
 }
 
 #hero-logo {
