@@ -21,12 +21,7 @@ export const techStack = [
 	{
 		index: '03 // VISUAL_SYSTEMS',
 		title: 'Design & Creative',
-		items: [
-			'Figma',
-			'Adobe Creative Suite (Photoshop, Illustrator, After Effects, Premiere)',
-			'Affinity Suite',
-			'Blender',
-		],
+		items: ['Figma', 'Adobe Creative Suite', 'Affinity Suite', 'Blender'],
 	},
 	{
 		index: '04 // PHYSICAL_COMPUTING',

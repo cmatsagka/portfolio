@@ -218,57 +218,66 @@ h1 {
 	object-fit: contain;
 }
 
-.tech-stack-card {
-	margin: var(--spacing-xl) auto;
+.tech-stack-section {
+	margin: calc(var(--spacing-xl) * 2) auto;
 	padding: var(--spacing-lg) var(--spacing-md);
-	max-width: 1200px;
+	border-top: 2px solid var(--clr-text-main);
 }
 
-.tech-stack-card .pillar {
-	flex: 1;
-}
-
-.tech-stack-card h2 {
+.tech-stack-section h2 {
 	font-size: var(--font-size-xl);
 	font-weight: 800;
 	letter-spacing: -0.02em;
-	margin-bottom: var(--spacing-lg);
-	text-transform: uppercase;
+	margin: var(--spacing-sm) auto;
+	max-width: 1400px;
 }
 
-.tech-stack-card .section-pillars {
-	display: flex;
-	flex-direction: row;
-	gap: var(--spacing-xl);
+.tech-wrapper {
+	max-width: 1400px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: var(--spacing-lg);
+	align-items: start;
+}
+
+.tech-category {
 	padding-top: var(--spacing-md);
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-xsm);
+}
+
+.cat-index {
+	font-family: monospace;
+	font-size: var(--font-size-sm);
+	font-weight: 700;
+	color: var(--clr-text-secondary);
+	letter-spacing: 0.1em;
+}
+
+.cat-title {
+	margin-left: auto;
+
+	font-size: var(--font-size-sm);
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	margin-bottom: var(--spacing-md);
+	text-transform: uppercase;
 }
 
 .tech-list {
 	display: flex;
+	flex-wrap: wrap;
 	gap: var(--spacing-md);
 }
 
-.tech-stack-card .pillar h3 {
-	font-size: var(--font-size-base);
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
-	margin-bottom: var(--spacing-sm);
-}
-
 .tech-list li {
-	font-size: var(--font-size-md);
-	font-weight: 500;
-	padding-right: var(--spacing-md);
-	position: relative;
-}
-
-.tech-list li:not(:last-child):after {
-	content: '·';
-	position: absolute;
-	right: calc(var(--spacing-md) / 2);
-	color: var(--clr-text-secondary);
-	font-size: var(--font-size-lg);
+	font-size: var(--font-size-sm);
+	background-color: var(--clr-text-main);
+	color: var(--clr-bg);
+	font-weight: 700;
+	padding: var(--spacing-xsm) var(--font-size-sm);
 }
 
 .about-section {
@@ -540,14 +549,8 @@ footer {
 		gap: var(--spacing-lg);
 	}
 
-	.tech-stack-card .section-pillars {
-		flex-direction: column;
-		justify-content: space-between;
-		gap: var(--spacing-lg);
-	}
-
 	.tech-list {
-		flex-wrap: wrap;
+		gap: var(--spacing-sm);
 	}
 
 	.about-grid {
