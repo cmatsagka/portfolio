@@ -4,8 +4,10 @@ import '@fontsource/inter/600.css';
 
 import './styles.css';
 import { renderProjects, initProjectScrollObserver } from './projects.js';
+import { renderTechStack } from './techStackRender.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	renderProjects();
 	initProjectScrollObserver();
+	renderTechStack();
 });
