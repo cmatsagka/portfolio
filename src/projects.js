@@ -14,6 +14,12 @@ export function renderProjects() {
 		const topOffset = 6 + index * 1.5;
 		panel.style.top = `${topOffset}rem`;
 
+		const indexLabel = document.createElement('span');
+		indexLabel.classList.add('project-index');
+		const currentIndex = String(index + 1).padStart(2, '0');
+		const totalProjects = String(projects.length).padStart(2, '0');
+		indexLabel.textContent = `${currentIndex} / ${totalProjects}`;
+
 		const preview = document.createElement('div');
 		preview.classList.add('project-preview');
 
@@ -28,13 +34,6 @@ export function renderProjects() {
 		projectImage.loading = 'lazy';
 		projectImage.decoding = 'async';
 		preview.appendChild(projectImage);
-
-		const indexLabel = document.createElement('span');
-		indexLabel.classList.add('project-index');
-		const currentIndex = String(index + 1).padStart(2, '0');
-		const totalProjects = String(projects.length).padStart(2, '0');
-		indexLabel.textContent = `${currentIndex} / ${totalProjects}`;
-		preview.appendChild(indexLabel);
 
 		const meta = document.createElement('div');
 		meta.classList.add('project-meta');
@@ -109,8 +108,10 @@ export function renderProjects() {
 
 			meta.appendChild(tagsWrapper);
 		}
-		panel.appendChild(meta);
+
+		panel.appendChild(indexLabel);
 		panel.appendChild(preview);
+		panel.appendChild(meta);
 		container.appendChild(panel);
 	});
 }

@@ -345,22 +345,35 @@ h1 {
 .project-panel {
 	position: sticky;
 	border-top: 2px solid var(--clr-text-main);
-	padding: var(--spacing-lg) 0;
+	padding: var(--spacing-md) var(--spacing-md) var(--spacing-xl)
+		var(--spacing-md);
 	display: flex;
 	flex-direction: column;
-	gap: var(--spacing-md);
+	gap: var(--spacing-sm);
 	margin-bottom: var(--spacing-xl);
+	background-color: var(--clr-bg);
+}
+
+.project-index {
+	font-size: var(--font-size-sm);
+	font-weight: 700;
+	color: var(--clr-text-secondary);
+	letter-spacing: 0.05em;
+	display: block;
+	padding: var(--spacing-xsm);
+	max-width: 1400px;
 }
 
 .project-preview {
-	position: relative;
 	overflow: hidden;
 	width: 100%;
+	max-width: 1250px;
+	margin: 0 auto;
 }
 
 .project-img {
 	width: 100%;
-	aspect-ratio: 21 / 9;
+	aspect-ratio: 16 / 9;
 	object-fit: cover;
 	object-position: top center;
 	display: block;
@@ -371,41 +384,29 @@ h1 {
 	transform: scale(1.02);
 }
 
-.project-index {
-	position: absolute;
-	bottom: var(--spacing-md);
-	left: var(--spacing-md);
-	font-size: var(--font-size-sm);
-	font-weight: 600;
-	color: var(--clr-text-secondary);
-	letter-spacing: 0.05em;
-	display: block;
-	margin-bottom: var(--spacing-xsm);
-}
-
 .project-meta {
 	display: flex;
 	flex-direction: column;
+	margin-left: auto;
 	gap: var(--spacing-sm);
-	padding-top: var(--spacing-xsm);
 }
 
 .project-header-row {
 	display: flex;
-	justify-content: space-between;
 	align-items: baseline;
+	/* justify-content: space-between; */
 	gap: var(--spacing-sm);
 }
 
 .project-title {
-	font-size: var(--font-size-xl);
+	font-size: var(--font-size-lg);
 	font-weight: 700;
 	letter-spacing: -0.01em;
 }
 
-.project-links {
+.projects-links {
 	display: flex;
-	gap: var(--spacing-sm);
+	gap: var(--spacing-md);
 	align-items: center;
 }
 
@@ -425,8 +426,8 @@ h1 {
 .project-desc {
 	font-size: var(--font-size-base);
 	color: var(--clr-text-secondary);
-	line-height: 1.6;
-	max-width: 48ch;
+	line-height: 1.5;
+	max-width: 75ch;
 }
 
 .project-tags {
@@ -437,9 +438,9 @@ h1 {
 }
 
 .project-tag {
-	font-size: 0.85rem;
+	font-size: var(--font-size-sm);
 	font-weight: 600;
-	padding: 0.25rem 0.75rem;
+	padding: var(--spacing-xsm) var(--spacing-sm);
 	color: var(--clr-primary);
 }
 
