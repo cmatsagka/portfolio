@@ -3,6 +3,9 @@ import '@fontsource/inter/500.css';
 import '@fontsource/inter/600.css';
 
 import './styles.css';
-import { renderProjects } from './projects.js';
+import { renderProjects, initProjectScrollObserver } from './projects.js';
 
-renderProjects();
+document.addEventListener('DOMContentLoaded', () => {
+	renderProjects();
+	initProjectScrollObserver();
+});
