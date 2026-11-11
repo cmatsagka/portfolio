@@ -1,34 +1,29 @@
 # Creative Developer & Designer Portfolio
 
-A clean, minimalist portfolio website designed to showcase web applications and design work. This project bridges the gap between technical logic and aesthetic layout, focusing on accessible semantic structure, modular code, and efficient asset delivery.
+A clean, responsive, and accessible portfolio website built to showcase web development projects and technical skills. Designed with a strong focus on core web fundamentals, performance optimization, and modular architecture.
 
-## [View Live Application](https://cmatsagka.github.io/portfolio/)
+[View Live Application](https://cmatsagka.github.io/portfolio/)
 
-![Portfolio Preview Image](src/assets/portfolio-preview.png)
+|                     Desktop Hero Overview                     |                        Selected Work Preview                        |
+| :-----------------------------------------------------------: | :-----------------------------------------------------------------: |
+| ![Portfolio Hero Preview](src/assets/portfolio_preview_1.png) | ![Portfolio Tech Stack Preview](src/assets/portfolio_preview_2.png) |
 
-## 📊 Key Details & Architecture
+## 🎯 Key Engineering & Design Highlights
 
-- **Aesthetic & Logic:** Built with fluid layouts (`clamp()`) and custom architectural shadows, removing unnecessary decoration or visual noise.
-- **Web Performance:** Optimized to load fast on mobile devices through careful asset delivery, explicit element aspect ratios, and local font bundling.
-- **Clean Architecture:** Written using vanilla JavaScript modules and packaged with Webpack to keep dependencies lightweight and structured.
-  Modular JS Rendering: A single-page architecture where raw project data is isolated in a standalone module (projectsData.js) and rendered securely using standard dynamic DOM methods (projects.js).
-
-- **Self-Hosted Assets:** Webpack bundles modern @fontsource/inter web fonts locally to ensure consistent, tracking-free loading without third-party network requests.
-
-- **Responsive Images:** Serve multi-density .webp files dynamically (1x and 2x retina structures) utilizing native HTML srcset properties to balance loading performance with screen clarity.
-
-- **Fluid Typography & Layouts:** Leverages CSS custom variables, Flexbox, CSS Grid, and responsive math (clamp()) to ensure the layout remains robust across viewport sizes without relying on heavy viewport breakpoint jumps.
-
-- **Accessibility First:** Uses semantic HTML5 landmarks, explicit keyboard focus styling, and standard screen reader helpers (aria-label / aria-hidden) for clean accessibility.
+- **Core Web Standards:** Built using semantic HTML5 landmarks, clean CSS custom properties, and modern layout systems (CSS Grid & Flexbox) to ensure robust responsiveness across all viewports.
+- **Accessibility (a11y):** Prioritizes screen reader compatibility, explicit keyboard focus states, and proper ARIA labeling for an inclusive user experience.
+- **Performance & SEO:** Optimized asset delivery, local font bundling, and semantic markup structure ensure fast load times and clean search engine indexing.
+- **Modular Vanilla JavaScript:** Utilizes ES6+ modules and native DOM templates (`<template>`) to render dynamic project data securely without heavy frontend framework overhead.
+- **Design Principles:** Employs clean typographic hierarchy, deliberate white space, and Gestalt principles (proximity and alignment) to maintain a readable, scannable user interface.
 
 ---
 
-## 🛠️ Tech Stack & Tools
+## 🛠️ Tech Stack
 
-- **Frontend:** HTML5 (Semantic markup), CSS3 (Custom properties, CSS Grid, Flexbox), Vanilla JavaScript (ES6+ Modules)
-- **Tooling:** npm, Webpack (Asset management, code bundling)
-- **Typography:** Inter (Self-hosted via `@font-source` for minimized loading chains)
-- **Asset Prep:** p5.js (generative portraits), WebP conversion
+- **Languages:** HTML5, CSS3, JavaScript (ES6+)
+- **Styling:** CSS Custom Properties, Flexbox, Grid, Responsive Media Queries
+- **Tooling & Bundling:** Webpack, npm
+- **Typography:** Self-hosted web fonts via `@fontsource` for reliable, tracking-free offline/online loading
 
 ---
 
@@ -36,15 +31,17 @@ A clean, minimalist portfolio website designed to showcase web applications and 
 
 ```text
 ├── src/
-│   ├── assets/             # Optimized project previews and SVGs
-│   ├── projects.js         # Dynamic portfolio card render loop
-│   ├── projectsData.js     # Data array housing project specs and image paths
-│   ├── styles.css          # Core design system and responsive media queries
-│   ├── template.html       # Semantic structural markup
+│   ├── assets/             # Optimized images and media
+│   ├── projects.js         # Dynamic project rendering logic
+│   ├── projectsData.js     # Data source for portfolio projects
+│   ├── techStackRender.js  # Dynamic tech stack rendering logic
+│   ├── techStackData.js    # Data source for tech stack
+│   ├── styles.css          # Core styles and responsive rules
+│   ├── template.html       # Semantic HTML markup
 │   └── index.js            # Main JavaScript orchestration entry point
-├── dist/                   # Production-compiled assets (Webpack output)
-├── package.json            # Node configuration and build scripts
-└── webpack.config.js       # Asset loaders and compilation configurations
+├── dist/                   # Production build output (Webpack)
+├── package.json            # Project dependencies and build scripts
+└── webpack.config.js       # Bundling and asset configuration
 ```
 
 ## 🚀 Local Installation
