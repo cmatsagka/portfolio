@@ -135,32 +135,51 @@ a:focus-visible {
 }
 
 header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	background-color: var(--clr-bg);
+}
+
+.header-container {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: var(--spacing-xsm) var(--spacing-sm);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: var(--spacing-sm);
-	padding: var(--spacing-xsm) var(--spacing-md);
+	gap: var(--spacing-md);
 	text-transform: uppercase;
-	font-weight: 900;
 }
 
-h1 {
-	font-size: var(--font-size-md);
-	font-weight: 700;
+.header-title {
+	font-size: var(--font-size-base);
+	font-weight: 800;
+	letter-spacing: -0.01em;
+	transition: color 0.2s ease;
+}
+
+.header-title:hover {
+	color: var(--clr-primary);
 }
 
 .nav-section {
 	display: flex;
 	gap: var(--spacing-sm);
+	align-items: center;
 }
 
 .nav-section a {
-	font-size: var(--font-size-md);
-	transition: color 0.2s ease;
+	font-size: var(--font-size-base);
+	font-weight: 800;
+	padding: 0 var(--spacing-sm);
+	transition: all 0.15s ease;
 }
 
 .nav-section a:hover {
-	color: var(--clr-primary);
+	color: var(--clr-bg);
+	background-color: var(--clr-text-main);
 }
 
 .hero-section {
