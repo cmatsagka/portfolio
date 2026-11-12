@@ -26,6 +26,31 @@
 
 html {
 	scroll-behavior: smooth;
+	scroll-snap-type: y proximity;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--clr-bg, #fff);
+	border-left: 1px solid var(--clr-text-main, #000);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--clr-text-main #000);
+	border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #444;
+}
+
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #000 #fff;
 }
 
 *,
@@ -276,7 +301,8 @@ footer {
 	padding: var(--spacing-xl) var(--spacing-md);
 	margin-top: 0;
 	margin-bottom: var(--spacing-xl);
-	scroll-margin-top: 4.5rem;
+	scroll-snap-align: start;
+	scroll-margin-top: 5rem;
 }
 
 .projects-section h2,

@@ -3,8 +3,9 @@ import '@fontsource/inter/500.css';
 import '@fontsource/inter/600.css';
 
 import './styles.css';
-import { renderProjects, initProjectScrollObserver } from './projects.js';
+import { renderProjects } from './projects.js';
 import { renderTechStack } from './techStackRender.js';
+import { initProjectScrollObserver } from './scrollObserver.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const scrollTopBtn = document.getElementById('scroll-top-btn');

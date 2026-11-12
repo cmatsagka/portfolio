@@ -84,67 +84,36 @@ export function renderProjects() {
 		const preview = document.createElement('div');
 		preview.classList.add('project-preview');
 
+		const imageWrapper = proj.liveUrl
+			? document.createElement('a')
+			: document.createElement('div');
+
+		if (proj.liveUrl) {
+			imageWrapper.href = proj.liveUrl;
+			imageWrapper.setAttribute(
+				'aria-label',
+				`View ${proj.title} live website`
+			);
+			imageWrapper.target = '_blank';
+			imageWrapper.rel = 'noopener noreferrer';
+			imageWrapper.classList.add('project-img-link');
+		}
+
 		const projectImage = document.createElement('img');
 		projectImage.classList.add('project-img');
 		projectImage.src = proj.images.x1;
 		projectImage.srcset = `${proj.images.x1} 1x, ${proj.images.x2} 2x`;
-		projectImage.alt = '';
-		projectImage.setAttribute('aria-hidden', true);
+		projectImage.alt = proj.title ? `Screenshot of ${proj.title}` : '';
 		projectImage.width = 900;
 		projectImage.height = 600;
 		projectImage.loading = 'lazy';
 		projectImage.decoding = 'async';
-		preview.appendChild(projectImage);
+
+		imageWrapper.appendChild(projectImage);
+		preview.appendChild(imageWrapper);
 
 		panel.appendChild(meta);
 		panel.appendChild(preview);
 		container.appendChild(panel);
 	});
-}
-
-export function initProjectScrollObserver() {
-	const handleScroll = () => {
-		const panels = document.querySelectorAll('.project-panel');
-		const windowHeight = window.innerHeight;
-
-		const targetLine = windowHeight * 0.25;
-		let closestPanel = null;
-		let smallestDistance = Infinity;
-
-		panels.forEach((panel) => {
-			const rect = panel.getBoundingClientRect();
-			const distance = Math.abs(rect.top - targetLine);
-
-			if (rect.top <= windowHeight * 0.75 && rect.bottom >= 100) {
-				if (distance < smallestDistance) {
-					smallestDistance = distance;
-					closestPanel = panel;
-				}
-			}
-		});
-
-		panels.forEach((panel) => {
-			if (panel === closestPanel) {
-				panel.classList.add('in-view');
-			} else {
-				panel.classList.remove('in-view');
-			}
-		});
-	};
-
-	let ticking = false;
-	window.addEventListener(
-		'scroll',
-		() => {
-			if (!ticking) {
-				window.requestAnimationFrame(() => {
-					handleScroll();
-					ticking = false;
-				});
-				ticking = true;
-			}
-		},
-		{ passive: true }
-	);
-	handleScroll();
 }
