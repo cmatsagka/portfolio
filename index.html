@@ -3,29 +3,47 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Chry Mat | Frontend Developer Portfolio</title>
+		<title>Chrysanthi Matsagka | Creative Developer Portfolio</title>
 		<meta
 			name="description"
-			content="Explore the frontend web development portfolio of Chrysanthi Matsagka. Featuring modern, accessible, and high-performance web applications and design work."
+			content="Explore the creative development portfolio of Chrysanthi Matsagka. Featuring modern, accessible, and high-performance web applications and design work."
 		/>
 	<script defer src="main.js"></script></head>
 	<body>
 		<a href="#projects-container" class="skip-link">Skip to main content</a>
+
 		<header>
-			<h1>Chrysanthi Matsagka</h1>
-			<nav aria-label="Main navigation">
-				<ul class="nav-section">
-					<li><a href="#projects-container">Projects</a></li>
-					<li><a href="#tech-stack">Tech Stack</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
+			<div class="header-container">
+				<a href="#" class="header-title">// Chrysanthi Matsagka</a>
+
+				<button
+					id="menu-toggle"
+					aria-expanded="false"
+					aria-controls="primary-nav"
+				>
+					MENU
+				</button>
+
+				<nav id="primary-nav" aria-label="Main navigation">
+					<ul class="nav-section">
+						<li>
+							<a class="nav-link" href="#projects">Projects</a>
+						</li>
+						<li>
+							<a class="nav-link" href="#tech-stack"
+								>Tech Stack</a
+							>
+						</li>
+						<li><a class="nav-link" href="#about">About</a></li>
+						<li><a class="nav-link" href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
 		</header>
 		<main>
 			<section class="hero-section">
 				<div class="hero-tagline">
-					<code><pre>"portfolio": {
+					<pre><code>"portfolio": {
 	"prefix": 
 	"Showcase",
 	"body": [
@@ -67,6 +85,9 @@
 				</svg>
 			</section>
 			<aside class="socials-sidebar" aria-label="Social links">
+				<button id="scroll-top-btn" aria-label="Scroll back to top">
+					TOP →
+				</button>
 				<a
 					href="https://github.com/cmatsagka"
 					aria-label="View my GitHub profile"
@@ -102,13 +123,12 @@
 				/></a>
 			</aside>
 			<section id="projects" class="projects-section">
-				<h2>Selected Works</h2>
+				<h2>Selected Work</h2>
 				<div id="projects-container"></div>
 			</section>
 
 			<section id="tech-stack" class="tech-stack-section">
 				<h2>Tech Stack</h2>
-				
 			</section>
 			<template id="tech-category-template">
 				<div class="tech-category">
@@ -118,14 +138,14 @@
 				</div>
 			</template>
 
-			<section class="about-section">
-				<article id="about" class="about-container">
+			<section id="about" class="about-section">
+				<article class="about-container">
 					<h2 class="about-title">About me</h2>
 					<p class="about-lead">
-						I am a creative developer and designer with an Integrated
-						Master in Audio Visual Arts, bridging the gap between
-						aesthetic design and technical logic to build engaging
-						digital experiences.
+						I am a creative developer and designer with an
+						Integrated Master in Audio Visual Arts, bridging the gap
+						between aesthetic design and technical logic to build
+						engaging digital experiences.
 					</p>
 
 					<div class="about-grid">
@@ -133,16 +153,17 @@
 							<h3>Art &amp; Design</h3>
 							<p>
 								Rooted in graphic design and branding. I craft
-								visual identities and refined, responsive interfaces
-								that look beautiful on any screen.
+								visual identities and refined, responsive
+								interfaces that look beautiful on any screen.
 							</p>
 						</div>
 						<div class="about-pillar">
 							<h3>Logic &amp; Engineering</h3>
 							<p>
 								Driven by technical logic. I develop web
-								applications using modern JavaScript, interactive
-								installations, and physical computing.
+								applications using modern JavaScript,
+								interactive installations, and physical
+								computing.
 							</p>
 						</div>
 					</div>
@@ -153,18 +174,21 @@
 			</section>
 		</main>
 
-		<footer>
+		<footer id="contact">
 			<div class="footer-container">
 				<section class="contact-section">
-					<h2 id="contact">Get in touch!</h2>
+					<h2>// Get in touch</h2>
 					<p class="contact-text">
 						Whether you have a fully formed project that needs a
-						design-first development approach, an experimental idea at
-						the intersection of art and tech, or you just want to talk
-						creative coding—I’d love to connect.
+						design-first development approach, an experimental idea
+						at the intersection of art and tech, or you just want to
+						talk creative coding—I’d love to connect.
 					</p>
 					<div class="contact-direct">
-						<a href="mailto:cmatsagka@gmail.com" class="contact-email">
+						<a
+							href="mailto:cmatsagka@gmail.com"
+							class="contact-email"
+						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="18"
@@ -172,7 +196,7 @@
 								fill="currentColor"
 								class="bi bi-envelope"
 								viewBox="0 0 16 16"
-								>
+							>
 								<path
 									d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
 								/>
@@ -187,19 +211,22 @@
 							aria-label="View my GitHub profile"
 							target="_blank"
 							rel="noopener noreferrer"
-							>GITHUB ↗</a>
+							>GITHUB ↗</a
+						>
 						<a
 							href="https://www.linkedin.com/in/chrysanthi-matsagka-2790042a2/"
 							aria-label="View my LinkedIn profile"
 							target="_blank"
 							rel="noopener noreferrer"
-							>LINKEDIN ↗</a>
+							>LINKEDIN ↗</a
+						>
 						<a
 							href="https://www.behance.net/chrysanthimatsagka"
 							aria-label="View my Behance portfolio"
 							target="_blank"
 							rel="noopener noreferrer"
-							>BEHANCE ↗</a>
+							>BEHANCE ↗</a
+						>
 					</div>
 				</section>
 				<svg
