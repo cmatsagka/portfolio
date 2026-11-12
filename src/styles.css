@@ -343,6 +343,7 @@ footer {
 .project-meta {
 	display: flex;
 	flex-direction: column;
+	min-width: 0;
 	gap: var(--spacing-md);
 }
 
@@ -364,14 +365,17 @@ footer {
 .project-desc {
 	font-size: var(--font-size-base);
 	color: var(--clr-text-secondary);
+	overflow-wrap: break-word;
+	word-break: break-word;
 	line-height: 1.4;
 	max-width: 45ch;
 }
 
-.project-tags {
+.projects-tags {
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--spacing-xsm);
+	width: 100%;
 }
 
 .project-tag {
@@ -380,6 +384,8 @@ footer {
 	font-weight: 600;
 	padding: var(--spacing-xsm) var(--spacing-sm);
 	color: var(--clr-primary);
+	min-width: 0;
+	white-space: normal;
 	transition: opacity 0.2s ease;
 }
 
@@ -389,6 +395,7 @@ footer {
 
 .projects-links {
 	display: flex;
+	flex-wrap: wrap;
 	gap: var(--spacing-md);
 	margin-top: var(--spacing-xsm);
 }
@@ -465,7 +472,6 @@ footer {
 
 .cat-title {
 	margin-left: auto;
-
 	font-size: var(--font-size-sm);
 	font-weight: 700;
 	letter-spacing: -0.01em;
@@ -628,7 +634,6 @@ footer {
 		display: block;
 		background: none;
 		border: none;
-		font-family: monospace;
 		font-size: var(--font-size-md);
 		font-weight: 800;
 		cursor: pointer;
@@ -681,11 +686,50 @@ footer {
 		max-width: 280px;
 	}
 
+	.projects-section,
+	.tech-stack-section,
+	.about-section,
+	footer {
+		padding: var(--spacing-lg) var(--spacing-sm);
+		margin-bottom: var(--spacing-lg);
+	}
+
 	.project-panel {
 		position: relative;
-		top: 0 !important;
+		top: auto !important;
 		grid-template-columns: 1fr;
-		gap: var(--spacing-lg);
+		gap: var(--spacing-md);
+		margin-bottom: var(--spacing-lg);
+	}
+
+	.project-meta {
+		grid-area: var(--spacing-sm);
+	}
+
+	.project-desc {
+		max-width: 100%;
+	}
+
+	.projects-tags {
+		gap: 0rem;
+	}
+
+	.project-tag {
+		font-size: var(--font-size-xsm);
+		max-width: 100%;
+		overflow-wrap: anywhere;
+	}
+
+	.project-img {
+		aspect-ratio: 4 / 3;
+	}
+
+	.tech-wrapper {
+		gap: var(--spacing-md);
+	}
+
+	.cat-title {
+		margin-left: 0;
 	}
 
 	.tech-list {
@@ -695,12 +739,12 @@ footer {
 	.about-grid {
 		flex-direction: column;
 		gap: var(--spacing-lg);
+		padding-top: var(--spacing-sm);
 	}
 
 	.about-closing {
 		max-width: 100%;
-		text-align: left;
-		margin-left: 0;
+		text-align: center;
 	}
 
 	.footer-container {
@@ -709,10 +753,18 @@ footer {
 		gap: var(--spacing-lg);
 	}
 
+	.contact-section {
+		max-width: 100%;
+	}
+
+	.footer-socials {
+		flex-wrap: wrap;
+		gap: var(--spacing-md);
+	}
+
 	#footer-logo {
 		max-width: 180px;
 		align-self: center;
-		margin-top: var(--spacing-md);
 	}
 }
 
