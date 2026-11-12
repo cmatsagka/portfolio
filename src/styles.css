@@ -27,6 +27,7 @@
 html {
 	scroll-behavior: smooth;
 	scroll-snap-type: y proximity;
+	max-width: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -40,7 +41,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: var(--clr-text-main #000);
+	background: var(--clr-text-main, #000);
 	border-radius: 0;
 }
 
@@ -67,6 +68,7 @@ body {
 	background-color: var(--clr-bg);
 	color: var(--clr-text-main);
 	min-height: 100vh;
+	max-width: 100%;
 	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 }
@@ -450,7 +452,7 @@ footer {
 	max-width: 1400px;
 	margin: 0 auto;
 	display: grid;
-	grid-template-columns: repeat(1, 1fr);
+	grid-template-columns: 1fr;
 	gap: var(--spacing-lg);
 	align-items: start;
 }
@@ -637,17 +639,18 @@ footer {
 	.header-container {
 		padding: var(--spacing-xsm);
 		gap: var(--spacing-xsm);
+		flex-direction: column;
 	}
 
 	.header-title {
-		font-size: var(--font-size-sm);
+		font-size: var(--font-size-xsm);
 	}
 
 	#menu-toggle {
 		display: block;
 		background: none;
 		border: none;
-		font-size: var(--font-size-sm);
+		font-size: var(--font-size-xsm);
 		font-weight: 800;
 		cursor: pointer;
 		text-transform: uppercase;
@@ -697,7 +700,8 @@ footer {
 	}
 
 	#hero-logo {
-		max-width: 280px;
+		width: 80%;
+		max-width: 260px;
 	}
 
 	.projects-section,
@@ -717,7 +721,7 @@ footer {
 	}
 
 	.project-meta {
-		grid-area: var(--spacing-sm);
+		gap: var(--spacing-sm);
 	}
 
 	.project-desc {
@@ -731,15 +735,11 @@ footer {
 	.project-tag {
 		font-size: var(--font-size-xsm);
 		max-width: 100%;
-		overflow-wrap: anywhere;
+		white-space: nowrap;
 	}
 
 	.project-img {
 		aspect-ratio: 4 / 3;
-	}
-
-	.tech-wrapper {
-		gap: var(--spacing-md);
 	}
 
 	.cat-title {
@@ -747,7 +747,11 @@ footer {
 	}
 
 	.tech-list {
-		gap: var(--spacing-sm);
+		gap: var(--spacing-xsm);
+	}
+
+	.tech-list li {
+		font-size: var(--font-size-xsm);
 	}
 
 	.about-grid {
@@ -783,7 +787,15 @@ footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
-	* {
+	html {
+		scroll-behavior: auto;
+		scroll-snap-type: none;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
 		transition-duration: 0.01ms !important;
 	}
 }
