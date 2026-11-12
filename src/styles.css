@@ -626,15 +626,28 @@ footer {
 		transform: none;
 		flex-direction: row;
 		justify-content: center;
-		margin: var(--spacing-xl) 0;
+		margin: var(--spacing-lg) 0;
 		width: 100%;
+	}
+
+	#scroll-top-btn {
+		display: none;
+	}
+
+	.header-container {
+		padding: var(--spacing-xsm);
+		gap: var(--spacing-xsm);
+	}
+
+	.header-title {
+		font-size: var(--font-size-sm);
 	}
 
 	#menu-toggle {
 		display: block;
 		background: none;
 		border: none;
-		font-size: var(--font-size-md);
+		font-size: var(--font-size-sm);
 		font-weight: 800;
 		cursor: pointer;
 		text-transform: uppercase;
@@ -650,6 +663,7 @@ footer {
 		background: var(--clr-bg);
 		padding: var(--spacing-sm);
 		border-bottom: 1px solid var(--clr-text-main);
+		box-shadow: 0 8px 12px var(--clr-shadow);
 	}
 
 	#primary-nav.is-open {
