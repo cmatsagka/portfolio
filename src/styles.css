@@ -607,6 +607,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+	body {
+		padding: 0 var(--spacing-sm, 1rem);
+	}
+
 	.socials-sidebar {
 		position: static;
 		transform: none;
@@ -619,14 +623,25 @@ footer {
 	.hero-section {
 		grid-template-columns: 1fr;
 		justify-items: center;
-		text-align: center;
 		min-height: auto;
 		padding: var(--spacing-lg) var(--spacing-sm);
+		gap: var(--spacing-md);
 	}
 
 	.hero-tagline {
+		justify-self: center;
 		width: 100%;
-		text-align: center;
+	}
+
+	.hero-tagline pre {
+		font-size: var(--font-size-base);
+		overflow-x: auto;
+		max-width: 100%;
+		padding: var(--spacing-xsm);
+	}
+
+	#hero-logo {
+		max-width: 280px;
 	}
 
 	.project-panel {
